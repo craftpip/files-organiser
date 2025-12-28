@@ -25,13 +25,12 @@ def create_folder(path):
 # Function to classify videos as portrait or landscape
 def classify_video(filepath):
     try:
-        clip = VideoFileClip(filepath)
-        width, height = clip.size
-        clip.reader.close()
-        if height > width:
-            return "Video_Portrait"
-        else:
-            return "Video_Landscape"
+        with VideoFileClip(filepath) as clip:
+            width, height = clip.size
+            if height > width:
+                return "Video_Portrait"
+            else:
+                return "Video_Landscape"
     except Exception as e:
         logging.error(f"Error processing video {filepath}: {e}")
         return None
