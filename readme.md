@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ## 🔧 Usage
 
 ```bash
-python organize_files.py /path/to/your/media/folder
+python main.py /path/to/your/media/folder
 ```
 
 If you omit the folder argument, the script will prompt you to input one.

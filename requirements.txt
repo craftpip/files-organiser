@@ -1,2 +1,2 @@
-Pillow
-moviepy
+Pillow>=9.0,<10
+moviepy<2
